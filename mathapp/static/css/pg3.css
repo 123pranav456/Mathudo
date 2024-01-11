@@ -1,0 +1,24 @@
+.bt{
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 500px;
+    margin-right: 1000px;
+    padding: 5px;
+}
+#f1{
+    margin-left: 30px;
+}
+#l{
+    margin-left: 30px;
+}
+#s{
+    margin-left: 30px;
+}
+#an{
+    margin-left: 30px;
+    
+} 
+#k{
+    margin-left: 10px;
+    font-size: 10px;
+}

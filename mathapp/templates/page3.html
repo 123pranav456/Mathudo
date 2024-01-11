@@ -1,0 +1,31 @@
+{% extends "home.html" %}
+{% comment %} {% load static %}
+{% block pg3 %}
+{{block.super}}
+<link rel="stylesheet" href='{% static "static/css/pg3.css"%}'>
+{% endblock pg3%} {% endcomment %}
+{% block content %}
+    <div class='bt'>
+        <form action='trio' method='post'>
+        {% csrf_token %} 
+        <label id="f1">Enter Number</label>
+        <input type='text' name='first' style="border-radius:5px ; width:180px ;height:20px ;"><br><br>
+        <label id="k">Degrees/Radians:</label>
+        <select name="type" id="dr" style="border-radius:5px ; width:80px ;height:30px ;">
+          <option value="degrees">Degrees</option>
+          <option value="radians">Radians</option>
+        </select>
+        <br><br>
+        <label id="l">Trigonomrty operation:</label>
+        <select name="operation" id="op" style="border-radius:5px ; width:80px ;height:30px ;">
+          <option value="sin">sin</option>
+          <option value="cos">cos</option>
+          <option value="tan">tan</option>
+        </select>
+        <br><br>
+        <input type="submit" id="s" value="Submit" style="border-radius:5px ; width:80px ;height:40px ;">
+        <p id='an'style="font-size: 20px;">Answer</p>
+         <p id="re">.                        {{result}}</p>
+    </form>
+</div>
+{% endblock %}

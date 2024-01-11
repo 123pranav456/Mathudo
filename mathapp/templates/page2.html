@@ -1,0 +1,94 @@
+{% extends "home.html" %}
+{% comment %} {% load static %}
+{% block pg2 %}
+{{block.super}}
+<link rel="stylesheet" href='{% static "pg2.css"%}'>
+{% endblock pg2%} {% endcomment %}
+{% block content %}
+<div class='def1'>
+    <p id='d'>Arethematic</p>
+    <p>Arithmetic is a fundamental branch of mathematics that studies numbers and their operations. It deals with numerical calculations using the arithmetic operations of addition, subtraction, multiplication, and division.</p>
+</div>
+<div class='Aret'>
+    <form action='add' method='post'>
+        {% csrf_token %}
+        <label id="f1">First Number</label>
+        <input type='text' name='first' style="border-radius:5px ; width:180px ;height:20px ;"><br><br>
+        <label id="f2">Second Number</label>
+        <input type='text' name='second' style="border-radius:5px ; width:180px ;height:20px ;"><br><br>
+        <label id="l">Mathematical operation:</label>
+        <select name="operation" id="op" style="border-radius:5px ; width:80px ;height:30px ;">
+          <option value="Addition">Addition</option>
+          <option value="Subtraction">Subtraction</option>
+          <option value="Multiplication">Multiplication</option>
+          <option value="Division">Division</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Submit" style="border-radius:5px ; width:80px ;height:40px ;">
+        <p style="font-size: 20px;">.     Answer</p>
+         <p id="re">.                        {{result}}</p>
+    </form>
+</div>
+<div class='def2'>
+    <table id='pt'>
+        <tr>
+            <th id='d1'>Addition</th>
+            <td id='e1'>Addition is the process of combining two or more numbers to get a new total. The symbol used in addition problems is the plus sign (+). The total for addition is called the sum. 
+            </td>
+        </tr>
+        <tr>
+            <th id='d2'>Subtration</th>
+            <td id='e2'>Subtraction is the process of removing a number from another number to find the difference. It is the opposite of addition, which adds numbers together to find the sum.</td>
+        </tr>
+        <tr>
+            <th id='d3'>Multiplication</th>
+            <td id='e3'>Multiplication is a mathematical operation that involves two numbers and produces an answer. The answer to a multiplication problem is called the product. 
+            </td>
+        </tr>
+        <tr>
+            <th id='d4'>division</th>
+            <td id='e4'>In math, division is the process of breaking a number into equal parts and determining how many equal parts can be made. For example, dividing 15 by 3 means splitting 15 into 3 equal groups of 5.</td>
+        </tr>
+    </table>
+</div> 
+{% comment %} <div class='Aret'>
+    <form action='add'>
+     <label>First Number</label><br>
+     <input type='text' name='first'><br>
+     <label>Second Number</label><br>
+     <input type='text' name='second'><br>
+    <label>Choose a mathematical operation:</label>
+    <select name="operation" id="op">
+          <option value="Addition">Addition</option>
+          <option value="Subtraction">Subtraction</option>
+          <option value="Multiplication">Multiplication</option>
+          <option value="Division">Division</option>
+        </select>
+        <br><br>
+     <input type="submit" value="Submit">
+     <p>result:{{result}}</p>
+    </form>
+</div>
+<div class='def2'>
+    <table id='pt'>
+        <tr>
+            <th id='d1'>Addition</th>
+            <td id='e1'>Addition is the process of combining two or more numbers to get a new total. The symbol used in addition problems is the plus sign (+). The total for addition is called the sum. 
+            </td>
+        </tr>
+        <tr>
+            <th id='d2'>Subtration</th>
+            <td id='e2'>Subtraction is the process of removing a number from another number to find the difference. It is the opposite of addition, which adds numbers together to find the sum.</td>
+        </tr>
+        <tr>
+            <th id='d3'>Multiplication</th>
+            <td id='e3'>Multiplication is a mathematical operation that involves two numbers and produces an answer. The answer to a multiplication problem is called the product. 
+            </td>
+        </tr>
+        <tr>
+            <th id='d4'>division</th>
+            <td id='e4'>In math, division is the process of breaking a number into equal parts and determining how many equal parts can be made. For example, dividing 15 by 3 means splitting 15 into 3 equal groups of 5.</td>
+        </tr>
+    </tabel>
+</div>  {% endcomment %}
+{% endblock %}

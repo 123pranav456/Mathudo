@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href='{% static "style.css"%}'>
+</head>
+<body>
+    <div class="nav">
+        <table>
+            <tr id="b">
+                <th><p id="logo">Mathtudo<img src="{% static 'image/calculating.png'%}" height="25px"> </p></th>
+            </tr>
+        </table>
+        <ul>
+            <li><div class="drop">
+                <button class="btn"><img src="{% static 'image/icons8-hashtag-activity-grid-48.png' %}" height="22px">Topic</button>
+                <div class="content">
+                    <a href="1">Arethematic</a>
+                    <a href="">sub</a>
+                    <a href="">mul</a>
+                    <a href="">div</a>
+                </div>
+            </div></li>
+            <li><img src="{% static 'image/info.png'%}" height="22px">About</li>
+            <li><img src="{% static 'image/receiver.png'%}" height='22px'>contact</li>
+            <li><img src="{% static 'image/user.png'%}" height='22px'>login</li>
+            <li><img src="{% static 'image/power-button.png'%}"  height='22px'>logout</li>
+        </ul>
+    </div>
+    {% block content %}
+    {% endblock %}
+    <div class="second">
+        <div id="def">
+          <p style="font-size: 30px;">Math</p>
+          <p>Need help with basic addition? Looking to expand your knowledge of fractions, decimals, and percents? Want to learn algebra?<br>Use our interactive lessons to learn them all, then test your knowledge.</p>
+        </div>
+    </div>
+    
+
+    <div id='to'>
+      <div class='sec'>
+       <table >
+                <tr>
+                    <th id='se0'>Arethematic</th>
+                </tr>
+                
+                <tr>
+                    <td id='li0'><a href=''>sum<br>
+                    </td>
+                </tr>
+         </table>
+   
+      </div>
+      <div class='sec1'>
+        <table >
+                <tr>
+                    <th id='se'>Algebra</th>
+                </tr>
+                 
+                <tr>
+                    <td>Quatradic-equations</td>
+                </tr>
+          </table>
+    
+       </div>
+       <div class='sec3'>
+        <table >
+                 <tr>
+                     <th>Expotential</th>
+                 </tr>
+                 
+                 <tr>
+                     <td>square-root</td>
+                 </tr>
+          </table>
+    
+       </div>
+    </div>
+      
+ 
+  <div class="end">
+        <div id="innerend">
+          <p id="h">Why Mathtudo ?</p>
+          <table id="data">
+            <tr>
+                <th><img src="{% static 'image/learning_4730789.png'%}" height="44px"><br>Personalized learning</th>
+                <th><img src="{% static 'image/web-security_6993541.png'%}" height="44px"><br>Trusted content</th>
+                <th><img src="{% static 'image/pencil_806659.png'%}" height="44px"><br>Tools to empower teachers</th>
+            </tr>
+            <tr>
+                <td >Students practice at their own pace, first<br>filling in gaps in their understanding and <br>then accelerating their learning.</td>
+                <td>Created by experts,Mathtudo library<br> of trusted, standards-aligned practice and<br>lessons covers math K-12 through early<br> college It’s all free for all</td>
+                <td>With Mathtudo, teachers can identify<br>gaps in their students’ understanding, tailor<br>instruction, and meet the needs of every<br>student</td>
+            </tr>
+          </table>
+        </div> 
+    </div> 
+</body>
+</html>
